@@ -1,0 +1,29 @@
+# Full Event content 
+block RecoParticleFlowFEVT = {
+    untracked vstring outputCommands = {
+        "keep recoPFClusters_*_*_*",
+        "keep recoTracks_*_*_*",	
+        "keep recoPFBlocks_*_*_*",	
+        "keep recoPFCandidates_*_*_*"	
+    }           
+}       
+
+# RECO content
+block RecoParticleFlowRECO = {
+    untracked vstring outputCommands = {
+        "keep recoPFClusters_*_*_*",
+        "keep recoTracks_*_*_*",	
+        "keep recoPFBlocks_*_*_*",	
+        "keep recoPFCandidates_*_*_*"	
+    }   
+}       
+
+# AOD content
+block RecoParticleFlowAOD = {
+    untracked vstring outputCommands = {
+        "keep recoPFClusters_*_*_*",
+        "keep recoTracks_*_*_*",	
+        "keep recoPFBlocks_*_*_*",	
+        "keep recoPFCandidates_*_*_*"
+    }
+}
