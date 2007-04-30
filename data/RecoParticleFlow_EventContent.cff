@@ -2,7 +2,7 @@
 block RecoParticleFlowFEVT = {
     untracked vstring outputCommands = {
         "keep recoPFClusters_*_*_*",
-        "keep recoTracks_*_*_*",	
+#        "keep recoTracks_*_*_*",	
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*"	
     }           
@@ -12,7 +12,7 @@ block RecoParticleFlowFEVT = {
 block RecoParticleFlowRECO = {
     untracked vstring outputCommands = {
         "keep recoPFClusters_*_*_*",
-        "keep recoTracks_*_*_*",	
+#        "keep recoTracks_*_*_*",	
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*"	
     }   
@@ -22,7 +22,7 @@ block RecoParticleFlowRECO = {
 block RecoParticleFlowAOD = {
     untracked vstring outputCommands = {
         "keep recoPFClusters_*_*_*",
-        "keep recoTracks_*_*_*",	
+#        "keep recoTracks_*_*_*",	
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*"
     }
