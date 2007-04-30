@@ -1,0 +1,16 @@
+include "RecoParticleFlow/PFClusterProducer/data/particleFlowCluster.cff"
+include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff" 
+include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
+include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
+include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
+
+sequence particleFlowReco = {
+    particleFlowCluster,
+    elecPreId,
+    particleFlowSimParticle,
+    particleFlowBlock,
+    particleFlow    
+}
+
+
+
