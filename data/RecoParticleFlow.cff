@@ -7,7 +7,7 @@ include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
 sequence particleFlowReco = {
     particleFlowCluster,
     elecPreId,
-    particleFlowSimParticle,
+#    particleFlowSimParticle,
     particleFlowBlock,
     particleFlow    
 }
