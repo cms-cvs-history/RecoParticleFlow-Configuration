@@ -3,14 +3,12 @@ include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
-
+include "RecoParticleFlow/PFTracking/data/threeStepsTracking.cff"
 sequence particleFlowReco = {
+    threesteps,
     particleFlowCluster,
     elecPreId,
 #    particleFlowSimParticle,
     particleFlowBlock,
     particleFlow    
 }
-
-
-
