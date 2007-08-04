@@ -1,16 +1,19 @@
+include "RecoParticleFlow/PFClusterProducer/data/towerMakerPF.cff"
 include "RecoParticleFlow/PFClusterProducer/data/particleFlowCluster.cff"
 include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff" 
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
+include "RecoParticleFlow/PFTracking/data/threeStepsTracking.cff"
+include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
+
 
 sequence particleFlowReco = {
+    threesteps,
+    caloTowersPFRec,
     particleFlowCluster,
     elecPreId,
 #    particleFlowSimParticle,
     particleFlowBlock,
     particleFlow    
 }
-
-
-
