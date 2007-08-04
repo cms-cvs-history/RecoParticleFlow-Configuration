@@ -1,6 +1,7 @@
 # Full Event content 
 block RecoParticleFlowFEVT = {
     untracked vstring outputCommands = {
+	"drop CaloTowersSorted_towerMakerPF_*_*",
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
@@ -13,6 +14,7 @@ block RecoParticleFlowFEVT = {
 # RECO content
 block RecoParticleFlowRECO = {
     untracked vstring outputCommands = {
+	"drop CaloTowersSorted_towerMakerPF_*_*",
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
@@ -25,6 +27,7 @@ block RecoParticleFlowRECO = {
 # AOD content
 block RecoParticleFlowAOD = {
     untracked vstring outputCommands = {
+	"drop CaloTowersSorted_towerMakerPF_*_*",
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
