@@ -5,7 +5,7 @@ include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
 include "RecoParticleFlow/PFTracking/data/threeStepsTracking.cff"
-include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
+#include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
 
 
 sequence particleFlowReco = {
