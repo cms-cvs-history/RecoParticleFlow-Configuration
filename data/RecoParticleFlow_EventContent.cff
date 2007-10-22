@@ -5,9 +5,11 @@ block RecoParticleFlowFEVT = {
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
-        "keep *_firstWithMaterialTracks_*_*",
-        "keep *_vtxFilt_*_*",
-        "keep *_thirdvtxFilt_*_*" 
+        "keep recoPFRecTracks_*_*_*",
+        "keep *_firstvtxFilt_*_*",
+        "keep *_secondvtxFilt_*_*",
+        "keep *_thirdvtxFilt_*_*",
+        "keep *_fourthvtxFilt_*_*" 
     }           
 }       
 
@@ -18,9 +20,12 @@ block RecoParticleFlowRECO = {
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
-        "keep *_firstWithMaterialTracks_*_*",
-        "keep *_vtxFilt_*_*",
-        "keep *_thirdvtxFilt_*_*" 	
+        "keep recoPFRecTracks_*_*_*",
+        "keep *_firstvtxFilt_*_*",
+        "keep *_secondvtxFilt_*_*",
+        "keep *_thirdvtxFilt_*_*",
+        "keep *_fourthvtxFilt_*_*"
+
     }   
 }       
 
@@ -31,8 +36,10 @@ block RecoParticleFlowAOD = {
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
-        "keep recoTracks_firstWithMaterialTracks_*_*",
-        "keep recoTracks_vtxFilt_*_*",
-        "keep recoTracks_thirdvtxFilt_*_*" 
+        "keep recoPFRecTracks_*_*_*",
+        "keep recoTracks_firstvtxFilt_*_*",
+        "keep recoTracks_secondvtxFilt_*_*",
+        "keep recoTracks_thirdvtxFilt_*_*",
+        "keep recoTracks_fourthvtxFilt_*_*" 
     }
 }
