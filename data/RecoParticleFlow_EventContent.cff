@@ -31,8 +31,8 @@ block RecoParticleFlowRECO = {
 block RecoParticleFlowAOD = {
     untracked vstring outputCommands = {
 	"drop CaloTowersSorted_towerMakerPF_*_*",
-        "keep recoPFClusters_*_*_*",
-        "keep recoPFBlocks_*_*_*",	
+#        "keep recoPFClusters_*_*_*",
+#        "keep recoPFBlocks_*_*_*",	
         "keep recoPFCandidates_*_*_*",
         "keep recoTracks_firstvtxFilt_*_*",
         "keep recoTracks_secondvtxFilt_*_*",
