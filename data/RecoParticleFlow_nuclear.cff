@@ -1,0 +1,21 @@
+include "RecoParticleFlow/PFClusterProducer/data/towerMakerPF.cff"
+include "RecoParticleFlow/PFClusterProducer/data/particleFlowCluster.cff"
+include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff" 
+include "RecoParticleFlow/PFTracking/data/nuclearFlow.cff" 
+include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
+include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
+include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
+include "RecoParticleFlow/PFTracking/data/iterativeTk.cff"
+#include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
+
+replace particleFlowBlock.useNuclear=true
+
+sequence particleFlowRecoNuclear = {
+    iterativeTk,
+    nuclearFlow,
+    caloTowersPFRec,
+    particleFlowCluster,
+    particleFlowTrackWithNuclear,
+    particleFlowBlock,
+    particleFlow    
+}
