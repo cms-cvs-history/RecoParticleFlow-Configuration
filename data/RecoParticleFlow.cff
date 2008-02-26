@@ -12,9 +12,7 @@ sequence particleFlowReco = {
     iterativeTk,
     caloTowersPFRec,
     particleFlowCluster,
-particleFlowTrack,
-#    elecPreId,
-#    particleFlowSimParticle,
+    particleFlowTrack,
     particleFlowBlock,
     particleFlow    
 }
