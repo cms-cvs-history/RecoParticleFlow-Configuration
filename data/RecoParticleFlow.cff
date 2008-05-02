@@ -4,13 +4,9 @@ include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
-include "RecoTracker/IterativeTracking/data/iterativeTk.cff"
-#include "RecoParticleFlow/PFTracking/data/iterativeTk.cff"
-#include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
 
 
 sequence particleFlowReco = {
-    iterTracking,
     caloTowersPFRec,
     particleFlowCluster,
     particleFlowTrack,

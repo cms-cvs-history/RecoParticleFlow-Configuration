@@ -4,9 +4,7 @@ block RecoParticleFlowFEVT = {
 	"drop CaloTowersSorted_towerMakerPF_*_*",
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
-        "keep recoPFCandidates_*_*_*",
-        "keep *_secStep_*_*",
-        "keep *_thStep_*_*"
+        "keep recoPFCandidates_*_*_*"
     }           
 }       
 
@@ -16,9 +14,7 @@ block RecoParticleFlowRECO = {
 	"drop CaloTowersSorted_towerMakerPF_*_*",
         "keep recoPFClusters_*_*_*",
         "keep recoPFBlocks_*_*_*",	
-        "keep recoPFCandidates_*_*_*",
-        "keep *_secStep_*_*",
-        "keep *_thStep_*_*"
+        "keep recoPFCandidates_*_*_*"
 
     }   
 }       
@@ -29,8 +25,6 @@ block RecoParticleFlowAOD = {
 	"drop CaloTowersSorted_towerMakerPF_*_*",
 #        "keep recoPFClusters_*_*_*",
 #        "keep recoPFBlocks_*_*_*",	
-        "keep recoPFCandidates_*_*_*",
-        "keep recoTracks_secStep_*_*",
-        "keep recoTracks_thStep_*_*"
+        "keep recoPFCandidates_*_*_*"
     }
 }
