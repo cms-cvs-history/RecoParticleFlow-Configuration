@@ -4,8 +4,7 @@ include "RecoParticleFlow/PFTracking/data/particleFlowTrack.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
-include "RecoParticleFlow/PFTracking/data/threeStepsTracking_refit.cff"
-include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
+include "RecoTracker/Configuration/data/RecoTracker.cff"
 
 es_module = HcalTopologyIdealEP {}
 
@@ -14,7 +13,7 @@ es_module = CaloTowerConstituentsMapBuilder {
 }
 
 sequence particleFlowReco = {
-    threesteps,
+    ckftracks,
     caloTowersPFRec,
     particleFlowCluster,
     elecPreId,
