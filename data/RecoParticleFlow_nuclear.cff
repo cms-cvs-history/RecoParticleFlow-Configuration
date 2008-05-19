@@ -6,16 +6,16 @@ include "RecoParticleFlow/PFTracking/data/nuclearRemainingHits.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowSimParticle.cff"
 include "RecoParticleFlow/PFBlockProducer/data/particleFlowBlock.cff"
 include "RecoParticleFlow/PFProducer/data/particleFlow.cff"
-include "RecoParticleFlow/PFTracking/data/iterativeTk.cff"
-#include "CalibTracker/Configuration/data/SiStrip_FakeLorentzAngle.cff"
+include "RecoVertex/NuclearInteractionProducer/data/out_in.cff"
 
-replace particleFlowBlock.useNuclear=true
+replace particleFlowBlock.useNuclear = true
+replace outInClusters.trajectories = thStep
 
 sequence particleFlowRecoNuclear = {
-    iterativeTk,
-    nuclearRemainingHits,
     caloTowersPFRec,
     particleFlowCluster,
+    out_in_tracks,
+    nuclearRemainingHits,
     particleFlowTrackWithNuclear,
     particleFlowBlock,
     particleFlow    
