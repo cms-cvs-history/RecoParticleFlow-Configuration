@@ -10,6 +10,8 @@ include "RecoVertex/NuclearInteractionProducer/data/out_in.cff"
 
 replace particleFlowBlock.useNuclear = true
 replace outInClusters.trajectories = thStep
+replace outInClusters.stripClusters = thClusters
+replace outInClusters.pixelClusters = thClusters
 
 sequence particleFlowRecoNuclear = {
     caloTowersPFRec,
