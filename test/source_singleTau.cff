@@ -1,0 +1,35 @@
+include "Configuration/Generator/data/PythiaUESettings.cfi"
+
+source = PythiaSource 
+{
+    untracked bool pythiaVerbosity = false
+    #  possibility to run single or double back-to-back particles with PYTHIA
+    # if ParticleID = 0, run PYTHIA
+    untracked int32 ParticleID = 15
+    untracked bool DoubleParticle = false
+    untracked double Ptmin = 50. 
+    untracked double Ptmax = 50.0001
+    untracked double Etamin = -1
+    untracked double Etamax = 1
+    untracked double Phimin = 0. 
+    untracked double Phimax = 360.
+    
+    PSet PythiaParameters = 
+    {
+	# This is a vector of ParameterSet names to be read, in this order
+	vstring parameterSets = 
+	{
+	    "pythiaUESettings",
+	    "pythiaTauJets"
+	}
+	using pythiaUESettingsBlock
+	
+	vstring pythiaTauJets = 
+	{
+	    'MDME(89,1)=0      ! no tau->electron',
+	    'MDME(90,1)=0      ! no tau->muon'
+	}
+    }
+}
+
+
