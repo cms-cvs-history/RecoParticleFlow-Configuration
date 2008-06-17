@@ -1,0 +1,28 @@
+include "Configuration/Generator/data/PythiaUESettings.cfi"
+
+source = PythiaSource 
+{
+    untracked bool pythiaVerbosity = false
+    #  possibility to run single or double back-to-back particles with PYTHIA
+    # if ParticleID = 0, run PYTHIA
+    untracked int32 ParticleID = 11
+    untracked bool DoubleParticle = true
+    untracked double Ptmin = 0. 
+    untracked double Ptmax = 100.0001
+    untracked double Etamin = -3
+    untracked double Etamax = 3
+    untracked double Phimin = 0. 
+    untracked double Phimax = 360.
+
+    PSet PythiaParameters = 
+    {
+	# This is a vector of ParameterSet names to be read, in this order
+	vstring parameterSets = 
+	{
+	    "pythiaUESettings"
+	}
+	using pythiaUESettingsBlock
+    }
+}
+
+
