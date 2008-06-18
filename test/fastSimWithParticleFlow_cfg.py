@@ -23,6 +23,11 @@ process.famosPileUp.PileUpSimulator.averageNumber = 0.0
 process.famosSimHits.VertexGenerator.BetaStar = 0.00001
 process.famosSimHits.VertexGenerator.SigmaZ = 0.00001
 
+# Parametrized magnetic field (new mapping, 4.0 and 3.8T)
+process.load("Configuration.StandardSequences.MagneticField_40T_cff")
+#process.load("Configuration.StandardSequences.MagneticField_38T_cff")
+process.VolumeBasedMagneticFieldESProducer.useParametrizedTrackerField = True
+
 # process.famosSimHits.MaterialEffects.PairProduction = false
 # process.famosSimHits.MaterialEffects.Bremsstrahlung = false
 # process.famosSimHits.MaterialEffects.EnergyLoss = false
