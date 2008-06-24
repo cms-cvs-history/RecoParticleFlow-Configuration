@@ -38,7 +38,7 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 
 
 process.p1 = cms.Path(
-    process.famosWithEverything +
+    process.famosWithCaloTowersAndParticleFlow +
     process.particleFlowSimParticle
     )
 
