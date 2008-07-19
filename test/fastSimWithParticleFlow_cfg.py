@@ -10,6 +10,7 @@ process.maxEvents = cms.untracked.PSet(
 
 #generation
 process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
+# process.load("FastSimulation.Configuration.SimpleJet_cfi")
 
 #fastsim
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
@@ -39,6 +40,7 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 
 process.p1 = cms.Path(
     process.famosWithCaloTowersAndParticleFlow +
+    process.caloJetMetGen +
     process.particleFlowSimParticle
     )
 
