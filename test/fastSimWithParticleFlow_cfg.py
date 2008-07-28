@@ -39,7 +39,8 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 
 
 process.p1 = cms.Path(
-    process.famosWithCaloTowersAndParticleFlow +
+#    process.famosWithCaloTowersAndParticleFlow +
+    process.famosWithEverything *
     process.caloJetMetGen +
     process.particleFlowSimParticle
     )
@@ -47,7 +48,7 @@ process.p1 = cms.Path(
 
 process.load("FastSimulation.Configuration.EventContent_cff")
 process.aod = cms.OutputModule("PoolOutputModule",
-    process.AODEventContent,
+    process.AODSIMEventContent,
     fileName = cms.untracked.string('aod.root')
 )
 
