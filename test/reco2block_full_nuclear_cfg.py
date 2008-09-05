@@ -47,6 +47,7 @@ process.block = cms.OutputModule("PoolOutputModule",
 process.p = cms.Path(process.siPixelRecHits*
                      process.siStripMatchedRecHits*
                      process.ckftracks*
+                     process.electronSequence*
                      process.nuclearRemainingHits*
                      process.particleFlowTrackWithNuclear*
                      process.particleFlowBlock

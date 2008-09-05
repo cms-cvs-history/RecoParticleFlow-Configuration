@@ -5,25 +5,30 @@ process.load("Configuration.StandardSequences.Reconstruction_cff")
 process.load("Configuration.StandardSequences.MagneticField_cff")
 process.load("Configuration.StandardSequences.Geometry_cff")
 process.load("Configuration.StandardSequences.FakeConditions_cff")
+process.load("RecoParticleFlow.Configuration.RecoParticleFlow_conversion_cff")
+
+
 
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(5)
 )
 process.source = cms.Source("PoolSource",
-                            fileNames = cms.untracked.vstring('file:reco.root')
-)
+                            fileNames = cms.untracked.vstring('/store/relval/CMSSW_2_1_2/RelValSingleGammaPt35/GEN-SIM-DIGI-RAW-HLTDEBUG-RECO/IDEAL_V9_10TeV_v1/0005/5628896F-3574-DD11-96B6-001D09F27003.root')
+                            )
 
-process.MessageLogger = cms.Service("MessageLogger",
-    rectoblk = cms.untracked.PSet(
-        threshold = cms.untracked.string('INFO')
-    ),
-    destinations = cms.untracked.vstring('rectoblk')
-)
+process.MessageLogger = cms.Service(
+    "MessageLogger",
+    conv_rectoblk = cms.untracked.PSet(
+    threshold = cms.untracked.string('INFO')),
+    destinations = cms.untracked.vstring('conv_rectoblk')
+    )
 
-process.dump = cms.EDAnalyzer("EventContentAnalyzer")
+process.Timing =cms.Service("Timing")
+
+
 process.block = cms.OutputModule("PoolOutputModule",
-    fileName = cms.untracked.string('blocks_full.root'),
+    fileName = cms.untracked.string('conversion_block.root'),
     outputCommands = cms.untracked.vstring(
             'drop *',
             'keep recoPFRecHits_*_*_*',
@@ -46,7 +51,10 @@ process.p = cms.Path(process.siPixelRecHits*
                      process.ckftracks*
                      process.electronSequence*
                      process.conversionSequence*
-                     process.particleFlowReco)
+                     process.particleFlowRecoConversion
+                     )
+
+
 process.outpath = cms.EndPath(process.block)
 
 
