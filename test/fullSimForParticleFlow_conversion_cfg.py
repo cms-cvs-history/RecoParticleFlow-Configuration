@@ -21,6 +21,7 @@ process.load("Configuration.StandardSequences.RawToDigi_cff")
 process.load("Configuration.StandardSequences.DigiToRaw_cff")
 #reconstruction
 process.load("Configuration.StandardSequences.Reconstruction_cff")
+process.load("RecoParticleFlow.Configuration.RecoParticleFlow_conversion_cff")
 process.load("Configuration.StandardSequences.MagneticField_cff")
 process.load("Configuration.StandardSequences.Geometry_cff")
 #Trigger
@@ -42,33 +43,22 @@ process.p1 = cms.Path(
     process.localreco+
     process.globalreco+
     process.egammareco+
-    process.particleFlowReco
+    process.particleFlowRecoConversion
     )
 
 
 
-process.load("Configuration.EventContent.EventContent_cff")
-process.aod = cms.OutputModule("PoolOutputModule",
-    process.AODEventContent,
-    fileName = cms.untracked.string('aod.root')
-)
-
-process.reco = cms.OutputModule("PoolOutputModule",
-    process.RECOEventContent,
-    fileName = cms.untracked.string('reco.root')
-)
 
 
 
 process.load("RecoParticleFlow.Configuration.Display_EventContent_cff")
 process.block = cms.OutputModule("PoolOutputModule",
                           process.DisplayEventContent,         
-    fileName = cms.untracked.string('blocks_full.root'),
+    fileName = cms.untracked.string('blocks_full_conversion.root'),
 )
 
 process.outpath = cms.EndPath(
-   process.aod+
-   process.reco+
+
    process.block
 )
 
