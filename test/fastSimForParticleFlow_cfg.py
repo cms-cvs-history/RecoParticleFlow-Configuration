@@ -40,6 +40,7 @@ process.dump = cms.OutputModule("EventContentAnalyzer")
 
 process.p1 = cms.Path(
     process.famosWithTracksAndCaloHits+
+    process.famosWithElectrons+
     process.caloTowersPFRec+
     process.particleFlowCluster+
     process.elecpreid+
