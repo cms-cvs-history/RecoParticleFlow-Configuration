@@ -10,6 +10,7 @@ process.maxEvents = cms.untracked.PSet(
 
 #generation
 process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
+#process.load("FastSimulation.Configuration.SimpleJet_cfi")
 
 #fastsim
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
@@ -17,6 +18,7 @@ process.load("FastSimulation.Configuration.CommonInputsFake_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
 
 process.famosSimHits.SimulateCalorimetry = True
+#process.famosSimHits.Calorimetry.UnfoldedMode = True 
 process.famosSimHits.SimulateTracking = True
 process.famosPileUp.PileUpSimulator.averageNumber = 0.0
 
@@ -28,11 +30,11 @@ process.load("Configuration.StandardSequences.MagneticField_40T_cff")
 #process.load("Configuration.StandardSequences.MagneticField_38T_cff")
 process.VolumeBasedMagneticFieldESProducer.useParametrizedTrackerField = True
 
-# process.famosSimHits.MaterialEffects.PairProduction = false
-# process.famosSimHits.MaterialEffects.Bremsstrahlung = false
-# process.famosSimHits.MaterialEffects.EnergyLoss = false
-# process.famosSimHits.MaterialEffects.MultipleScattering = false
-# process.famosSimHits.MaterialEffects.NuclearInteraction = false
+#process.famosSimHits.MaterialEffects.PairProduction = False
+#process.famosSimHits.MaterialEffects.Bremsstrahlung = False
+#process.famosSimHits.MaterialEffects.EnergyLoss = False
+#process.famosSimHits.MaterialEffects.MultipleScattering = False
+#process.famosSimHits.MaterialEffects.NuclearInteraction = False
 
 process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 
@@ -47,6 +49,8 @@ process.p1 = cms.Path(
     process.fsGsfElCandidates+
     process.fsgsfPFtracks+
     process.pfTrackElec+
+    #process.caloJetMetGen+
+    #process.particleFlowSimParticle+
     process.dump
     )
 
