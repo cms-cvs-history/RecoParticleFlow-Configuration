@@ -36,7 +36,7 @@ process.VolumeBasedMagneticFieldESProducer.useParametrizedTrackerField = True
 # process.famosSimHits.MaterialEffects.NuclearInteraction = False
 
 process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
-
+process.load("Validation.RecoParticleFlow.tauBenchmarkGeneric_cff")
 
 process.p1 = cms.Path(
     process.famosWithElectrons+
