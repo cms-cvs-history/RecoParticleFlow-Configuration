@@ -14,8 +14,9 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 
 #fastsim
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
-process.load("FastSimulation.Configuration.CommonInputsFake_cff")
+process.load("FastSimulation.Configuration.CommonInputs_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
+process.GlobalTag.globaltag = "IDEAL_30X::All"
 
 process.famosSimHits.SimulateCalorimetry = True
 #process.famosSimHits.Calorimetry.UnfoldedMode = True 
