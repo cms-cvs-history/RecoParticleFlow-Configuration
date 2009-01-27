@@ -14,8 +14,9 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 
 #fastsim
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
-process.load("FastSimulation.Configuration.CommonInputsFake_cff")
+process.load("FastSimulation.Configuration.CommonInputs_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
+process.GlobalTag.globaltag = "IDEAL_V9::All"
 
 process.famosSimHits.SimulateCalorimetry = True
 process.famosSimHits.SimulateTracking = True
@@ -39,9 +40,7 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 process.load("Validation.RecoParticleFlow.tauBenchmarkGeneric_cff")
 
 process.p1 = cms.Path(
-    process.famosWithElectrons+
-    process.famosWithCaloTowersAndParticleFlow +
-#    process.famosWithEverything *
+    process.famosWithEverything *
     process.caloJetMetGen +
     process.particleFlowSimParticle
     )
