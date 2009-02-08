@@ -42,17 +42,21 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 process.dump = cms.OutputModule("EventContentAnalyzer")
 
 process.p1 = cms.Path(
-    process.famosWithTracksAndCaloHits+
-    process.famosWithElectrons+
-    process.caloTowersPFRec+
-    process.particleFlowCluster+
-    process.elecpreid+
-    process.fsGsfElCandidates+
-    process.fsgsfPFtracks+
-    process.pfTrackElec+
+    process.famosWithTracksAndEcalClusters+
+    process.vertexreco+
+    process.caloTowersRec+ 
+    process.famosElectronSequence
+    #process.famosWithTracksAndCaloHits+
+    #process.famosWithElectrons+
+    #process.caloTowersRec+
+    #process.particleFlowCluster+
+    #process.elecpreid+
+    #process.fsGsfElCandidates+
+    #process.fsgsfPFtracks+
+    #process.pfTrackElec+
     #process.caloJetMetGen+
     #process.particleFlowSimParticle+
-    process.dump
+    #process.dump
     )
 
 
@@ -60,6 +64,12 @@ process.load("FastSimulation.Configuration.EventContent_cff")
 process.aod = cms.OutputModule("PoolOutputModule",
     process.AODEventContent,
     fileName = cms.untracked.string('aod.root')
+)
+
+process.load("FastSimulation.Configuration.EventContent_cff")
+process.aod = cms.OutputModule("PoolOutputModule",
+    process.RECOEventContent,
+    fileName = cms.untracked.string('reco.root')
 )
 
 process.load("RecoParticleFlow.Configuration.Display_EventContent_cff")
