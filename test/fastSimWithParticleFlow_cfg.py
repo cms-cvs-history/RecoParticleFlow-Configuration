@@ -54,6 +54,12 @@ process.aod = cms.OutputModule("PoolOutputModule",
     fileName = cms.untracked.string('aod.root')
 )
 
+process.load("FastSimulation.Configuration.EventContent_cff")
+process.reco = cms.OutputModule("PoolOutputModule",
+    process.RECOSIMEventContent,
+    fileName = cms.untracked.string('reco.root')
+)
+
 process.load("RecoParticleFlow.Configuration.Display_EventContent_cff")
 process.display = cms.OutputModule("PoolOutputModule",
     process.DisplayEventContent,
