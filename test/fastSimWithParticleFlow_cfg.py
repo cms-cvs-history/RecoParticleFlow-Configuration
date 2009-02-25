@@ -42,7 +42,8 @@ process.load("Validation.RecoParticleFlow.tauBenchmarkGeneric_cff")
 
 process.p1 = cms.Path(
 #    process.famosWithCaloTowersAndParticleFlow +
-    process.famosWithEverything *
+    process.ProductionFilterSequence +
+    process.famosWithEverything +
     process.caloJetMetGen +
     process.particleFlowSimParticle
     )
@@ -68,4 +69,28 @@ process.display = cms.OutputModule("PoolOutputModule",
 
 process.outpath = cms.EndPath(process.aod + process.display)
 
+process.load("FWCore.MessageLogger.MessageLogger_cfi")
+process.options = cms.untracked.PSet(
+    makeTriggerResults = cms.untracked.bool(False),
+    wantSummary = cms.untracked.bool(False),
+    Rethrow = cms.untracked.vstring('Unknown', 
+        'ProductNotFound', 
+        'DictionaryNotFound', 
+        'InsertFailure', 
+        'Configuration', 
+        'LogicError', 
+        'UnimplementedFeature', 
+        'InvalidReference', 
+        'NullPointerError', 
+        'NoProductSpecified', 
+        'EventTimeout', 
+        'EventCorruption', 
+        'ModuleFailure', 
+        'ScheduleExecutionFailure', 
+        'EventProcessorFailure', 
+        'FileInPathError', 
+        'FatalRootError', 
+        'NotFound')
+)
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
 #
