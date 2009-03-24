@@ -39,10 +39,10 @@ process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
 process.load("Validation.RecoParticleFlow.tauBenchmarkGeneric_cff")
 
 process.p1 = cms.Path(
-    process.famosWithElectrons+
-    process.famosWithCaloTowersAndParticleFlow +
-#    process.famosWithEverything *
-    process.caloJetMetGen +
+#    process.famosWithElectrons+
+#    process.famosWithCaloTowersAndParticleFlow +
+    process.famosWithEverything *
+#    process.caloJetMetGen +
     process.particleFlowSimParticle
     )
 
