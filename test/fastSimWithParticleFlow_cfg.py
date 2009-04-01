@@ -14,6 +14,10 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 
 #fastsim
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
+from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper
+randSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)
+randSvc.populate()
+
 process.load("FastSimulation.Configuration.CommonInputsFake_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
 
