@@ -18,7 +18,7 @@ process.maxEvents = cms.untracked.PSet(
 #process.load("FastSimulation.Configuration.FamosSequences_cff")
 process.load("RecoParticleFlow.Configuration.RecoParticleFlow_cff")
 
-process.load("RecoParticleFlow.PFBlockProducer.particleFlowSimParticle_cff")
+process.load("RecoParticleFlow.PFProducer.particleFlowSimParticle_cff")
 
 process.p1 = cms.Path(
     process.particleFlowBlock+
