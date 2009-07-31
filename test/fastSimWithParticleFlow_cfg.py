@@ -16,7 +16,7 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
 process.load("FastSimulation.Configuration.CommonInputs_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
-process.GlobalTag.globaltag = "IDEAL_31X::All"
+process.GlobalTag.globaltag = "MC_31X_V3::All"
 
 
 process.famosSimHits.SimulateCalorimetry = True
@@ -92,5 +92,5 @@ process.options = cms.untracked.PSet(
         'FatalRootError', 
         'NotFound')
 )
-process.MessageLogger.cerr.FwkReport.reportEvery = 100
+process.MessageLogger.cerr.FwkReport.reportEvery = 10
 #
