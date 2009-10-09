@@ -10,6 +10,8 @@ process.maxEvents = cms.untracked.PSet(
 
 #generation
 process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
+#process.load("RecoParticleFlow.Configuration.source_particleGun_cfi")
+#process.generator.PGunParameters.ParticleID = cms.vint32(22)
 # process.load("FastSimulation.Configuration.SimpleJet_cfi")
 
 #fastsim
@@ -38,7 +40,6 @@ process.VolumeBasedMagneticFieldESProducer.useParametrizedTrackerField = True
 # process.famosSimHits.MaterialEffects.NuclearInteraction = False
 
 process.load("RecoParticleFlow.PFProducer.particleFlowSimParticle_cff")
-process.load("Validation.RecoParticleFlow.tauBenchmarkGeneric_cff")
 
 process.p1 = cms.Path(
 #    process.famosWithCaloTowersAndParticleFlow +
