@@ -18,7 +18,7 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
 process.load("FastSimulation.Configuration.CommonInputs_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
-process.GlobalTag.globaltag = "MC_3XY_V14::All"
+process.GlobalTag.globaltag = "MC_3XY_V25::All"
 
 
 process.famosSimHits.SimulateCalorimetry = True
