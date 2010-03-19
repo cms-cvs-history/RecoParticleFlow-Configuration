@@ -18,8 +18,9 @@ process.load("RecoParticleFlow.Configuration.source_singleTau_cfi")
 process.load("FastSimulation.Configuration.RandomServiceInitialization_cff")
 process.load("FastSimulation.Configuration.CommonInputs_cff")
 process.load("FastSimulation.Configuration.FamosSequences_cff")
-process.GlobalTag.globaltag = "MC_3XY_V25::All"
 
+from Configuration.PyReleaseValidation.autoCond import autoCond
+process.GlobalTag.globaltag = autoCond['mc']
 
 process.famosSimHits.SimulateCalorimetry = True
 process.famosSimHits.SimulateTracking = True
